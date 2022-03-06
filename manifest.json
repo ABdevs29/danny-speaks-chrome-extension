@@ -1,0 +1,29 @@
+{
+  "name": "DannySpeaks",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "Danny_Profile_Pic.png"
+  },
+  "icons": {
+    "285": "Danny_Profile_Pic.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "activeTab",
+    "storage",
+    "webRequest",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' https://platform.twitter.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*/", "https://*/*/"],
+      "js": ["script.js"]
+    }
+  ]
+}
