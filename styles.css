@@ -12,6 +12,7 @@ header {
     color: blue;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 .container {
     display: flex;
@@ -28,4 +29,8 @@ header {
     border: 1px solid black;
     border-radius: 6px;
     padding: 0 0 10px 0;
+}
+#twitterLogo {
+    width: 20px;
+    height: 20px;
 }

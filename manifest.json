@@ -19,10 +19,12 @@
     "webRequest",
     "<all_urls>"
   ],
-  "content_security_policy": "script-src 'self' https://platform.twitter.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://platform.twitter.com ; object-src 'self' 'sha256-base64 encoded hash'",
   "content_scripts": [
     {
       "matches": ["http://*/*/", "https://*/*/"],
+      "all_frames": true,
+      "run_at": "document_idle", 
       "js": ["script.js"]
     }
   ]
